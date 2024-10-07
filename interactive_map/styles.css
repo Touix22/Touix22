@@ -1,0 +1,130 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+    background-color: #f0f0f0;
+    display: flex;
+}
+
+#menu {
+    position: absolute;
+    top: 0;
+    left: -350px;
+    width: 400px;
+    height: 1100px;
+    overflow: hidden;
+    transition: left 0.3s ease;
+    background-image: url('images/main_menu.png');
+    background-size: cover;
+    z-index: 10;
+}
+
+#menu:hover {
+    left: 0;
+}
+
+#container {
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    z-index: 1;
+}
+
+img {
+    max-width: none;
+    max-height: none;
+    transition: transform 0.1s ease;
+    cursor: grab;
+}
+
+.button {
+    position: absolute;
+    width: 395px;
+    height: 150px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-color: transparent;
+    border: none;
+    margin: 0;
+    padding: 0;
+    transition: transform 0.3s, background-image 0.3s;
+    cursor: pointer;
+}
+
+.button:hover {
+    transform: scale(1.1);
+}
+
+#button1 {
+    top: 50px;
+    left: 0px;
+    background-image: url('images/mobs_b.png');
+}
+
+#button2 {
+    top: 150px;
+    left: 0px;
+    background-image: url('images/map_b.png');
+}
+
+#button3 {
+    top: 250px;
+    left: 0px;
+    background-image: url('images/chest_b.png');
+}
+
+#button4 {
+    top: 350px;
+    left: 0px;
+    background-image: url('images/soon_b.png');
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 20;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0,0,0);
+    background-color: rgba(0,0,0,0.4);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.modal-content {
+    background-color: #fefefe;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 300px;
+    position: relative;
+}
+
+.close {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    color: #aaa;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+#tagControls {
+    display: none;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
+
+#tagControls button {
+    margin: 5px;
+    padding: 10px;
+    cursor: pointer;
+}
